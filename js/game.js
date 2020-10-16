@@ -1,4 +1,5 @@
 let word, display;
+let hp = 100;
 
 function startRound() {
     for (let btn of buttons) {
@@ -40,5 +41,10 @@ function correctLetter(n) {
 }
 
 function fail() {
-    //
+    redLayer.show();
+    setTimeout(() => {
+        redLayer.hide()
+    }, 50);
+    hp -= 10;
+    hpBar.css('width', `${hp}%`);
 }

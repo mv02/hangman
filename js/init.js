@@ -1,6 +1,7 @@
 const wordDisplay = $('#word');
 const hpBar = $('#hp-bar');
 const buttons = $('.keyboard-row button');
+const redLayer = $('#red-layer');
 
 function init() {
     for (let btn of buttons) {
