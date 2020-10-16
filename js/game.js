@@ -58,13 +58,11 @@ function fail() {
 }
 
 function win() {
-    alert('gg');
     wordDisplay.addClass('correct');
     setTimeout(startRound, 1500);
 }
 
 function lose() {
-    alert('kokot');
     wordDisplay.addClass('wrong');
     wordDisplay.text(formatWord(word));
     setTimeout(startRound, 1500);
