@@ -1,5 +1,6 @@
 let word, display;
 let hp = 100;
+let finished = false;
 
 function startRound() {
     for (let btn of buttons) {
@@ -16,9 +17,12 @@ function startRound() {
 
     hp = 100;
     hpBar.css('width', `${hp}%`);
+
+    finished = false;
 }
 
 function press(btn) {
+    if (finished) return;
     btn.disabled = true;
     let guess = btn.innerText.toLowerCase();
 
@@ -58,11 +62,13 @@ function fail() {
 }
 
 function win() {
+    finished = true;
     wordDisplay.addClass('correct');
     setTimeout(startRound, 1500);
 }
 
 function lose() {
+    finished = true;
     wordDisplay.addClass('wrong');
     wordDisplay.text(formatWord(word));
     setTimeout(startRound, 1500);
