@@ -64,3 +64,7 @@ function lose() {
     alert('kokot');
     setTimeout(startRound, 500);
 }
+
+function setDiff(n) {
+    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+}
