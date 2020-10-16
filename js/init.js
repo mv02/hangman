@@ -10,6 +10,15 @@ function init() {
         };
     }
 
+    document.onkeypress = e => {
+        for (let btn of buttons) {
+            if (btn.innerText.toLowerCase() == e.key && !btn.disabled) {
+                press(btn);
+                break;
+            }
+        }
+    };
+
     startRound();
 }
 
