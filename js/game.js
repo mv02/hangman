@@ -11,6 +11,9 @@ function startRound() {
     // pridej podtrzitka podle delky slova
     for (let i = 0; i < word.length; i++) display += '_';
     wordDisplay.text(formatWord(display));
+
+    hp = 100;
+    hpBar.css('width', `${hp}%`);
 }
 
 function press(btn) {
