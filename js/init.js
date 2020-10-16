@@ -19,6 +19,7 @@ function init() {
         }
     };
 
+    wordDisplay.css('visibility', 'visible');
     startRound();
 }
 
