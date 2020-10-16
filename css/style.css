@@ -32,3 +32,11 @@ body {
     height: 100%;
     background-color: rgba(255, 0, 0, 0.5);
 }
+
+.correct {
+    color: limegreen !important;
+}
+
+.wrong {
+    color: red !important;
+}

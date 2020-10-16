@@ -11,6 +11,8 @@ function startRound() {
     // pridej podtrzitka podle delky slova
     for (let i = 0; i < word.length; i++) display += '_';
     wordDisplay.text(formatWord(display));
+    wordDisplay.removeClass('correct');
+    wordDisplay.removeClass('wrong');
 
     hp = 100;
     hpBar.css('width', `${hp}%`);
@@ -57,13 +59,15 @@ function fail() {
 
 function win() {
     alert('gg');
-    setTimeout(startRound, 500);
+    wordDisplay.addClass('correct');
+    setTimeout(startRound, 1500);
 }
 
 function lose() {
     alert('kokot');
+    wordDisplay.addClass('wrong');
     wordDisplay.text(formatWord(word));
-    setTimeout(startRound, 500);
+    setTimeout(startRound, 1500);
 }
 
 function setDiff(n) {
