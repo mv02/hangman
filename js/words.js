@@ -2,7 +2,6 @@ let words;
 
 function getWords() {
     return $.getJSON('https://raw.githubusercontent.com/bevacqua/correcthorse/master/wordlist.json', data => {
-        console.log(data);
         words = data;
     });
 }
