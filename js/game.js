@@ -62,6 +62,7 @@ function win() {
 
 function lose() {
     alert('kokot');
+    wordDisplay.text(formatWord(word));
     setTimeout(startRound, 500);
 }
 
