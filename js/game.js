@@ -31,6 +31,9 @@ function press(btn) {
         wordDisplay.text(formatWord(display));
     }
     else fail();
+
+    if (!display.includes('_')) win();
+    if (hp <= 0) lose();
 }
 
 function correctLetter(n) {
@@ -47,4 +50,14 @@ function fail() {
     }, 50);
     hp -= 10;
     hpBar.css('width', `${hp}%`);
+}
+
+function win() {
+    alert('gg');
+    setTimeout(startRound, 500);
+}
+
+function lose() {
+    alert('kokot');
+    setTimeout(startRound, 500);
 }
